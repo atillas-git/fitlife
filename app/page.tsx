@@ -1,113 +1,78 @@
-import Image from "next/image";
-
+import { Button, Card, CardBody, CardHeader, Link } from "@nextui-org/react";
+import { FaDumbbell, FaTrophy } from "react-icons/fa";
+import { CiShare2 } from "react-icons/ci";
+import Testimonials from "@/components/home/Testimonials";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen bg-zinc-50">
+      <main>
+        <div className="sm:container mx-auto">
+          <div className="sm:px-0">
+            <div className="rounded-lg">
+              <section className="text-center py-20 bg-zinc-800 text-white">
+                <h2 className="text-4xl font-bold mb-4">Welcome to FitLife</h2>
+                <p className="mb-8">Discover, Share, and Achieve Your Fitness Goals!</p>
+                <Button size="lg">
+                  Get Started
+                </Button>
+              </section>
+              <section className="py-20 p-3 bg-white">
+                <div className="max-w-4xl mx-auto text-center">
+                  <h3 className="text-3xl font-bold mb-6">Why FitLife?</h3>
+                  <p className="mb-8">At FitLife, we are dedicated to connecting fitness enthusiasts with expert trainers and nutritionists. Whether you are looking to find the perfect workout routine, a meal plan that fits your lifestyle, or share your own success stories and plans with others, FitLife is your go-to platform.</p>
+                  <div className="grid grid-cols-12 p-3 gap-3">
+                    <div className="col-span-12 sm:col-span-4">
+                        <Card className="p-2 sm:p-4 h-full">
+                          <CardHeader className="flex flex-col items-center">
+                            <FaDumbbell className="text-4xl text-zinc-900 mb-4" />
+                            <p className="text-xl font-semibold">Discover</p>
+                          </CardHeader>
+                          <CardBody>
+                            <p>Find the perfect workout routines and meal plans from experts.</p>
+                          </CardBody>
+                        </Card>
+                    </div>
+                    <div className="col-span-12 sm:col-span-4">
+                      <Card className="p-2 sm:p-4 h-full">
+                        <CardHeader className="flex flex-col items-center">
+                          <CiShare2 className="text-4xl text-green-500 mb-4" />
+                          <p className="text-xl font-semibold">Share</p>
+                        </CardHeader>
+                        <CardBody>
+                          <p>Share your own routines and plans with the community.</p>
+                        </CardBody>
+                      </Card>
+                    </div>
+                    <div className="col-span-12 sm:col-span-4">
+                      <Card className="p-2 sm:p-4 h-full">
+                        <CardHeader className="flex flex-col items-center">
+                          <FaTrophy className="text-4xl text-yellow-500 mb-4" />
+                          <p className="text-xl font-semibold">Achieve</p>
+                        </CardHeader>
+                        <CardBody>
+                          <p>Reach your fitness goals with personalized guidance.</p>
+                        </CardBody>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <Testimonials/>
+              </section>
+              <section className="py-20 bg-zinc-200">
+                <div className="mx-auto text-center">
+                  <h3 className="text-3xl font-bold mb-6">Join Our Community</h3>
+                  <p className="mb-8">Become part of a thriving community of fitness enthusiasts and professionals.</p>
+                  <Button size="lg" as={Link} href="/signup">
+                    Sign Up Now
+                  </Button>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
